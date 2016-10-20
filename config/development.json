@@ -1,5 +1,28 @@
 {
     "middleware": {
-
+        "devtools": {
+            "enabled": true,
+            "priority": 35,
+            "module": {
+                "name": "construx",
+                "arguments": [
+                    "path:./client",
+                    "path:./bundle",
+                    {
+                        "webpack": {
+                            "module": "construx-webpack",
+                            "config": {
+                                "webpack": "path:./webpack.config",
+                                "bundler": {
+                                    "noInfo": false,
+                                    "publicPath": "/"
+                                }
+                            },
+                            "files": "/*.js"
+                        }
+                    }
+                ]
+            }
+        }
     }
 }

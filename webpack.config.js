@@ -12,7 +12,8 @@ module.exports = {
     },
 
     output: {
-        filename: './bundle/[name].js'
+        path: Path.resolve('./bundle'),
+        filename: '[name].js'
     },
 
     resolve: {
